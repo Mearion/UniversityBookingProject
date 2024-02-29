@@ -7,11 +7,11 @@ namespace UniversityBookingProject.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class NapBookingController : ControllerBase
+    public class BookingController : ControllerBase
     {
         private readonly Context _context;
 
-        public NapBookingController(Context context)
+        public BookingController(Context context)
         {
             _context = context;
         }

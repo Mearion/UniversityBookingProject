@@ -20,13 +20,13 @@ namespace AuctionAPI.Controllers
         [HttpPost]
         public JsonResult CreateEdit(AuctionInfo auctionInfo)
         {
-            if (auctionInfo.UID == null)
+            if (auctionInfo.UserID == null)
             {
                 _AuctionContext.AuctionInfos.Add(auctionInfo);
             }
             else
             {
-                var auctionInDB = _AuctionContext.AuctionInfos.Find(auctionInfo.UID);
+                var auctionInDB = _AuctionContext.AuctionInfos.Find(auctionInfo.UserID);
 
                 if (auctionInDB == null)
                     return new JsonResult(NotFound());

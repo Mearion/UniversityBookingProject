@@ -36,7 +36,7 @@ namespace UniversityBookingProject.Controllers
 
             _context.SaveChanges();
 
-            return new JsonResult(Ok((booking)));
+            return new JsonResult(Ok(booking));
         }
 
         //Get

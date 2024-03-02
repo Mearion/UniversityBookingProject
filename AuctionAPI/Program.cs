@@ -1,12 +1,10 @@
+using AuctionAPI.Data;
 using Microsoft.EntityFrameworkCore;
-using UniversityBookingProject.Data;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<AuctionContext>(options => options.UseInMemoryDatabase("Auction"));
 
-builder.Services.AddDbContext<Context>(options => options.UseInMemoryDatabase("Booking"));
-builder.Services.AddDbContext<Context>(options => options.UseInMemoryDatabase("Auction"));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -16,11 +16,11 @@ namespace UniversityBookingProject.Controllers
             _context = context;
         }
 
-        // Create and Edit
+        //Create and Edit
         [HttpPost]
         public JsonResult CreateEdit(RoomBooking booking)
         {
-            if (booking.ID == 0)
+            if (booking.ID != 0)
             {
                 _context.RoomBookings.Add(booking);
             } 

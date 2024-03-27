@@ -7,6 +7,6 @@
         public string LastName { get; set; }
         public string Email { get; set; }
         public bool IsAdmin { get; set; }
-        public int RoomNumber { get; set; }
+        public int PodNumber { get; set; }
     }
 }
